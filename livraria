@@ -6,3 +6,9 @@ def adicionar_livro():
     estoque.append(livro)
     print(f"Livro '{titulo}' adicionado com sucesso!")
 
+def listar_livros():
+    if not estoque:
+        print("Nenhum livro disponível.")
+    else:
+        for i, livro in enumerate(estoque, 1):
+            print(f"{i}. {livro['titulo']} por {livro['autor']} - R${livro['preco']:.2f}")
